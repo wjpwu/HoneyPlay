@@ -1,0 +1,294 @@
+﻿*
+{
+	margin: 0 auto;
+	padding: 0px;
+}
+body
+{
+	background: url('../images/bodybg.jpg') 0 49px repeat-x #030e27;
+}
+table
+{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+#LogoBg
+{
+	width: 100%;
+	height: 49px;
+	background: url('../images/LogoBg.gif') repeat-x center center;
+	text-align: center;
+}
+#LogoBg div
+{
+	width: 272px;
+	height: 49px;
+	margin: auto;
+	background: url('../images/Logo.gif') no-repeat;
+}
+#Block
+{
+	overflow: hidden;
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	background: url('../images/body.jpg') no-repeat center top;
+}
+#InputTitle
+{
+	margin-top: 15px;
+	height: 43px;
+}
+#InputTitle td
+{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 43px;
+	font-size: 18px;
+	font-weight: bolder;
+	letter-spacing: 1px;
+}
+#InputBlock
+{
+	height: 185px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	background-color: #ececec;
+}
+#RememberFlag
+{
+	margin-top: 15px;
+	height: 20px;
+}
+#RememberFlag .left
+{
+	width: 70px;
+	height: 20px;
+}
+#RememberFlag .right
+{
+	height: 20px;
+	font-size: 12px;
+	color: #646464;
+	vertical-align: middle;
+	line-height: 20px;
+	padding-left:10px;
+}
+#LoginBtn
+{
+	cursor: pointer;
+	margin-top: 10px;
+	height: 38px;
+}
+#LoginBtn .left
+{
+	width: 17px;
+	height: 38px;
+	background: url('../images/All.png') 0px -258px no-repeat;
+}
+#LoginBtn .mid
+{
+	height: 38px;
+	background: url('../images/All.png') 0px -334px repeat-x;
+	text-align: center;
+	line-height: 38px;
+	font-size: 18px;
+	font-weight: bolder;
+	letter-spacing: 8px;
+	color: White;
+	text-shadow: 1px 0px #000;
+}
+#LoginBtn .right
+{
+	width: 17px;
+	height: 38px;
+	background: url('../images/All.png') -32px -296px no-repeat;
+}
+#Tool, #Iphone, #Android
+{
+	font-size: 14px;
+	font-weight: bolder;
+	color: #012d65;
+	height: 32px;
+	line-height: 30px;
+	vertical-align:middle;
+	cursor: pointer;
+}
+#Tool .left
+{
+	width: 42px;
+	height: 100%;
+	background: url('../images/All.png') 0px -372px no-repeat;
+}
+#Tool .mid
+{
+	height: 100%;
+	background: url('../images/All.png') 0px -564px repeat-x;
+}
+#Tool .right
+{
+	width: 50px;
+	height: 100%;
+	background: url('../images/All.png') 0px -468px no-repeat;
+}
+#Iphone .left
+{
+	width: 42px;
+	height: 100%;
+	background: url('../images/All.png') 0px -404px no-repeat;
+}
+#Iphone .mid
+{
+	height: 100%;
+	background: url('../images/All.png') 0px -596px repeat-x;
+}
+#Iphone .right
+{
+	width: 50px;
+	height: 100%;
+	background: url('../images/All.png') 0px -500px no-repeat;
+}
+#Android .left
+{
+	width: 42px;
+	height: 100%;
+	background: url('../images/All.png') 0px -436px no-repeat;
+}
+#Android .mid
+{
+	height: 100%;
+	background: url('../images/All.png') 0px -628px repeat-x;
+}
+#Android .right
+{
+	width: 50px;
+	height: 100%;
+	background: url('../images/All.png') 0px -532px no-repeat;
+}
+.on
+{
+	color: #fff;
+	text-shadow: 1px 0px #6c6c6c;
+}
+.out
+{
+	cursor: pointer;
+	color: #6c6c6c;
+	text-shadow: 1px 0px #fff;
+}
+
+.left_l_on,.left_l_out,.right_r_on,.right_r_out
+{
+	width: 9px;
+	height: 43px;
+}
+.left_l_on
+{
+	background: url('../images/All.png') no-repeat 0px -129px;	
+}
+.left_l_out
+{
+	background: url('../images/All.png') no-repeat 0px 0px;
+}
+.left_r_on,.mid_on,.right_l_on
+{
+	color: #fff;
+	height: 43px;
+	background: url('../images/All.png') repeat-x 0px -215px;
+}
+.mid_on, .mid_out
+{
+	border-left: solid 1px #6c6c6c;
+	border-right: solid 1px #6c6c6c;
+}
+.left_r_out, .mid_out, .right_l_out
+{
+	height: 43px;
+	background: url('../images/All.png') repeat-x 0px -86px;
+}
+.right_r_out
+{
+	background: url('../images/All.png') no-repeat -41px -43px;
+}
+.right_r_on
+{
+	background: url('../images/All.png') no-repeat -41px -172px;	
+}
+.InputLine
+{
+	height:30px;	
+}
+.InputLine .left
+{
+	height:30px;
+	width:70px;
+	font-size:14px;
+	color:#4f4f4f;
+}
+.InputLine .right
+{
+	padding-left:10px;
+	height:30px;
+}
+.line15px
+{
+	height:15px;	
+}
+.line10px
+{
+	height:10px;	
+}
+.line20px
+{
+	height:20px;	
+}
+.input90,.input100px
+{
+	border: solid 1px #acacac;
+	background-color: #fff;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #646464;
+}
+.input90
+{
+	margin-top: 0px;
+	width: 90%;
+}
+.input100px
+{
+	width: 100px;
+}
+
+.InputBlockBody
+{
+	background-color: #ececec;
+}
+
+.InputBlockBottom
+{
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	background-color: #ececec;
+}
+
+#TitleMsg
+{
+	margin: 0px;
+	padding: 8px;
+	border: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+form
+{
+	display: none;
+}

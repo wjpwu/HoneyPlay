@@ -1,0 +1,38 @@
+@(loginForm: Form[PBLogin],randomID : String)
+
+@import helper._
+
+@main("PB Banking") {
+    
+     @helper.form(action = routes.Application.login) {
+        
+        <fieldset>
+            <legend>Login</legend>
+            
+            @inputText(
+                loginForm("mobileNo"), 
+                '_label -> "mobileNo", 
+                '_help -> "Please choose a valid mobileNo.",
+                '_error -> loginForm.globalError
+            )
+            
+            @inputPassword(
+            	loginForm("passWord"),
+                 '_label -> "passWord",
+                '_help -> "Enter a valid qNo address.",
+                '_error -> loginForm.globalError
+                )
+         <input type="hidden" name="uuid" value="@{randomID}" />               
+        </fieldset>
+        
+	
+        <div class="actions">
+
+            <input type="submit" class="btn primary" value="Sign Up">
+            <input type="image" src="@{routes.Application.captcha(randomID)}" width = 40 height = 20
+             alt="" 
+           onclick="javascript:this.src='@routes.Application.captcha(randomID);"/>
+        </div>
+        
+    }
+}

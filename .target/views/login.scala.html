@@ -1,0 +1,68 @@
+@(loginForm: Form[PBLogin],randomID : String)
+
+@import helper._
+
+@main("PB Banking") {
+    
+     @helper.form(action = routes.Application.login) {
+         	<div class="inner-content hero">
+		<div>
+			<h5 id="login-page_sign_in_label" data-i18n="login-page-sign-in">Sign in to your account to pay bills, file claims, and more.</h5>
+		</div>
+		
+		@inputText(
+                loginForm("mobileNo"), 
+                '_label -> "Mobile No.",
+                'placeholder -> "Mobile No."
+            )
+		<br>
+		
+            @inputPassword(
+            	loginForm("passWord"),
+                 '_label -> "Password",
+                 'placeholder -> "Password"
+                
+            )
+		<br>
+		<input type="hidden" name="uuid" value="@{randomID}"
+            
+            
+            <div id="zipInput" backface-visibility:hidden;="">							
+							           @inputText(
+            	loginForm("captCode"),
+                 '_label -> "Capt Code",
+                 'placeholder -> "Capt Code"
+            )
+            
+            <input type="image" style="" class="go-button ui-third center" src="@{routes.Application.captcha(randomID)}" width = 40 height = 20
+             alt="" 
+           onclick="javascript:this.src='@routes.Application.captcha(randomID);"/>
+						
+						
+
+                       		
+		<div>
+			<h5>  <a href="#/reset-index" id="login-page_forgot_password" data-i18n="login-forgot-password">Forgot your user ID or password?</a></h5>
+		</div>
+
+            
+		<div class="btn-section clear">
+			<span class="checkbox left">
+				<label class="label_check c_off" for="save-user-id" id="save-user-id-label">
+					<input name="save-user-id" id="save-user-id" value="save-user-id" type="checkbox"><span data-i18n="login-save-user-id">Save User ID</span>
+				</label>
+			</span>
+			<input type="submit" class="go-button ui-third center" value="Log In">
+							
+			<div class="clear"></div>
+		</div>
+							</div>
+	
+
+            
+	</div>
+        
+        
+        
+    }
+}
