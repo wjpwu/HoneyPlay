@@ -4,9 +4,9 @@
 	<item id="0" upid="0" Name="" type="grid" img="" msg="" text="">
 		<item id="1" upid="0" Name="DebitCard" type="grid" img=""
 			msg="goGridMenu(1)" text="一卡通">
-			<item id="1.20" upid="1" type="web" img="homepage.png"
+			<item id="1.20" upid="1" type="qrcode" img="homepage.png"
 				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
-				text="欢迎页"></item>
+				text="二维码"></item>
 			<item id="1.1" upid="1" type="list" img="account_mgr.png" msg="goListMenu(1.1)"
 				text="账户管理">
 				<item id="1.1.1" upid="1.1" type="web" img=""

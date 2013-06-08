@@ -1,6 +1,6 @@
 package controllers;
 
-import java.io.ByteArrayInputStream;
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
-import javax.imageio.stream.ImageInputStream;
 
 import models.PBLogin;
 import play.Logger;
@@ -19,6 +18,9 @@ import play.libs.Images;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utils.PBUtils;
+
+import com.google.zxing.NotFoundException;
+import com.google.zxing.WriterException;
 
 public class MobileApp extends Controller {
 
@@ -80,7 +82,7 @@ public class MobileApp extends Controller {
 	public static Result getCaptcha(String uuid) throws IOException {
 		Logger.info("call captcha" + new Long(System.currentTimeMillis()).toString());
 		Images.Captcha captcha = Images.captcha();
-		captcha.setBackground("#FF0000");
+		captcha.setBackground("#A8A8A8");
 		String code = captcha.getText("#F4EAFD");
 		// File f = Play.application().getFile("public/images/favicon.png");
 		if(uuid != null)
@@ -143,6 +145,29 @@ public class MobileApp extends Controller {
 		return ok("<message status=\"1\">no support for this file type</message>");
 	}
 	
+	
+	public static Result getQRcodePng(String text) throws WriterException, IOException, NotFoundException
+	{
+		Logger.info("call getQRcodePng encode " + text);
+		BufferedImage qrCode = PBUtils.zxingQRencode(text, 198, 198);
+//		File logo = Play.application().getFile("/public/mobile/icons/icon_myfavorite_pressed.png");
+		BufferedImage qrCodeLogo = PBUtils.addLogo(qrCode, "Pact");
+		boolean readAble = true;
+		//check it's readable or not
+		try{
+			PBUtils.zxingQRDecode(qrCode);
+		}
+		catch (NotFoundException e)
+		{
+			readAble = false;
+		}
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ImageIO.write( readAble ? qrCodeLogo : qrCode, "PNG", baos );
+		baos.flush();
+		byte[] imageInByte = baos.toByteArray();
+		baos.close();	
+        return ok(imageInByte).as("image/png");
+	}
 	
 	public static Result newUser() {
 		return TODO;

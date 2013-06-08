@@ -14,6 +14,7 @@ GET    /mobilecaptcha/:uuid   controllers.MobileApp.getCaptcha(uuid: String)
 # The version parameter is optional. E.g. /api/list-all?client=3.0&file=
 GET    /mobileitem   	  controllers.MobileApp.getItem(client ?= "IOS", file ?= "CommonMenu.xml")
 GET    /mobileitemmd5     controllers.MobileApp.getItemMD5(client ?= "IOS", file ?= "CommonMenu.xml")
+GET    /QREncode     controllers.MobileApp.getQRcodePng(text ?= "helloworld110")
 
 
 

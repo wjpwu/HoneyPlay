@@ -185,7 +185,7 @@ public class Images {
 * Create a 150x150 captcha image
 */
     public static Captcha captcha() {
-        return captcha(150, 50);
+        return captcha(100, 50);
     }
 
     /**
@@ -204,15 +204,15 @@ public class Images {
         public Captcha(int w, int h) {
             this.w = w;
             this.h = h;
-            this.fonts.add(new Font("Arial", Font.BOLD, 40));
-            this.fonts.add(new Font("Courier", Font.BOLD, 40));
+            this.fonts.add(new Font("Arial", Font.BOLD, 35));
+            this.fonts.add(new Font("Courier", Font.BOLD, 35));
         }
 
         /**
 * Tell the captche to draw a text and retrieve it
 */
         public String getText() {
-            return getText(5);
+            return getText(4);
         }
 
         /**
@@ -227,7 +227,7 @@ public class Images {
 * Tell the captche to draw a text of the specified size and retrieve it
 */
         public String getText(int length) {
-            return getText(length, "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789");
+            return getText(length, "0123456789");
         }
 
         /**
@@ -327,7 +327,7 @@ public class Images {
                     bi = background.addBackground(bi);
                     renderer.render(text, bi);
                     if (noise != null) {
-                        new CurvedLineNoiseProducer(noise, 3.0f).makeNoise(bi);
+                        new CurvedLineNoiseProducer(noise, 5.0f).makeNoise(bi);
                     }
                     gimpy.gimp(bi);
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
