@@ -166,7 +166,7 @@ public class PBUtils {
         // draw text
         g2d.setPaint(Color.DARK_GRAY);
         g2d.setFont(new Font("Serif", Font.BOLD, 20));
-        String s = "QRCode Created from Aaron!";
+        String s = "QRCode Created from Pact!";
         FontMetrics fm = g2d.getFontMetrics();
         int x = imgmini.getWidth() - fm.stringWidth(s) - 5;
         int y = fm.getHeight();

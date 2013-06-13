@@ -146,7 +146,7 @@ public class MobileApp extends Controller {
 	}
 	
 	
-	public static Result getQRcodePng(String text) throws WriterException, IOException, NotFoundException
+	public static Result getQRcodePng(String text) throws WriterException, IOException
 	{
 		Logger.info("call getQRcodePng encode " + text);
 		BufferedImage qrCode = PBUtils.zxingQRencode(text, 198, 198);
