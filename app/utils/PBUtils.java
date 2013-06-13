@@ -136,15 +136,19 @@ public class PBUtils {
         Graphics2D gmimi2 = img2.createGraphics();
 
         // add logo by string
-        BufferedImage logoImg = new java.awt.image.BufferedImage(60, 25,BufferedImage.TYPE_USHORT_565_RGB);
+        BufferedImage logoImg = new java.awt.image.BufferedImage(54, 24,BufferedImage.TYPE_USHORT_565_RGB);
         double logoWidth = logoImg.getWidth();
         double logoHeight = logoImg.getHeight();
         Graphics2D logo2d = logoImg.createGraphics();
-        logo2d.setBackground(Color.gray);
-        logo2d.clearRect(0, 0, 55, 25);
+        logo2d.fillRoundRect(0, 0, 54,24, 0, 0);
+        logo2d.setColor(Color.DARK_GRAY);
+        logo2d.fillRoundRect(2, 2, 50,20, 0, 0);
+
+//        logo2d.c
+//        logo2d.clearRect(0, 0, 55, 25);
         // draw text
         logo2d.setPaint(Color.BLUE);
-        logo2d.setFont(new Font("Serif", Font.BOLD, 20));
+        logo2d.setFont(new Font("Arial", Font.BOLD, 16));
         FontMetrics fm1 = logo2d.getFontMetrics();
         int x1 = logoImg.getWidth() - fm1.stringWidth(logostr) - 10;
         int y1 = fm1.getHeight();
@@ -154,10 +158,10 @@ public class PBUtils {
         // add logo
         gmimi2.drawImage(logoImg, null, (int)(width - logoWidth)/2, (int)(height - logoHeight)/2);
         
-        BufferedImage imgmini = new java.awt.image.BufferedImage(300, 300,BufferedImage.TYPE_USHORT_565_RGB);
+        BufferedImage imgmini = new java.awt.image.BufferedImage(200, 200,BufferedImage.TYPE_USHORT_565_RGB);
 
-        int miniwidth = 300;//缩略图宽度
-        int miniheight = 300;//缩略图高度
+        int miniwidth = 200;//缩略图宽度
+        int miniheight = 200;//缩略图高度
         
         Graphics2D g2d = imgmini.createGraphics();
         g2d.setBackground(Color.WHITE);
@@ -166,9 +170,9 @@ public class PBUtils {
         // draw text
         g2d.setPaint(Color.DARK_GRAY);
         g2d.setFont(new Font("Serif", Font.BOLD, 20));
-        String s = "QRCode Created from Pact!";
+        String s = "Hello QRCode !";
         FontMetrics fm = g2d.getFontMetrics();
-        int x = imgmini.getWidth() - fm.stringWidth(s) - 5;
+        int x = imgmini.getWidth() - fm.stringWidth(s) - 25;
         int y = fm.getHeight();
         g2d.drawString(s, x, y);
         g2d.dispose();
