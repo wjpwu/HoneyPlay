@@ -1,0 +1,38 @@
+@(form: Form[PBUserInfo])
+
+@import helper._
+
+@mmain("PB Banking") {
+     @helper.form(action = routes.Application.postReg) {
+<div data-role="page" id="register" class="fade">
+    <div data-role="header" data-theme="e">
+        <a href="#login" data-role="button" data-icon="back">返回</a>
+        <h1>自助注册</h1>
+    </div>
+    <div data-role="content">
+        <form>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="fieldcontain">
+                    <label for="mobileNo">手机号:</label>
+                    <input type="text" name="mobileNo" id="mobileNo" value=""  />
+                </li>
+                <li data-role="fieldcontain">
+                    <label for="passWord">密码:</label>
+                    <input type="password" name="passWord" id="passWord" value=""  />
+                </li>
+
+                <li data-role="fieldcontain">
+                    <label for="passWordrepead">重复密码:</label>
+                    <input type="password" name="passWordrepead" id="passWordrepead" value=""  />
+                </li>
+
+                <li data-role="fieldcontain">
+                    <input type="submit" value="提交" data-theme="e" />
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+    }
+}

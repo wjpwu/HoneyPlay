@@ -2,11 +2,26 @@
 <MenuConfig>
 	<ERRNO>0</ERRNO>
 	<item id="0" upid="0" Name="" type="grid" img="" msg="" text="">
-		<item id="1" upid="0" Name="DebitCard" type="grid" img=""
-			msg="goGridMenu(1)" text="一卡通">
+		<item id="1" upid="0" Name="DebitCard" type="grid" img="icon_myfavorite"
+			msg="goGridMenu(1)" text="我的最爱">
 			<item id="1.20" upid="1" type="qrcode" img="homepage.png"
 				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
 				text="二维码"></item>
+			<item id="1.21" upid="1" type="web" img="account_mgr.png"
+				msg="PostRequest(transferout)"
+				text="招行异地汇款"></item>
+			<item id="1.22" upid="1" type="funcc" img="account_mgr.png"
+				msg="Post(http://www.wordpressmobiletheme.com/)"
+				text="手机模板1"></item>
+            <item id="1.23" upid="1" type="funcc" img="account_mgr.png"
+                  msg="Post(http://jansimecek.com/themes/breathe_wp/HTML/ORANGE/)"
+                  text="手机模板2"></item>
+            <item id="1.24" upid="1" type="funcc" img="account_mgr.png"
+                  msg="Post(http://taraprasad.com/wpmobb/fitness/)"
+                  text="手机模板3"></item>
+            <item id="1.25" upid="1" type="funcc" img="account_mgr.png"
+                  msg="Post(http://www.designcise.com/product/northern-lights-mobile/about.html)"
+                  text="Northern Lights HTML"></item>
 			<item id="1.1" upid="1" type="list" img="account_mgr.png" msg="goListMenu(1.1)"
 				text="账户管理">
 				<item id="1.1.1" upid="1.1" type="web" img=""
@@ -455,8 +470,8 @@
 					text="随借随还还款"></item>
 			</item>
 		</item>
-		<item id="2" upid="0" Name="CreditCard" type="grid" img=""
-			msg="goGridMenu(2)" text="信用卡">
+		<item id="2" upid="0" Name="CreditCard" type="grid" img="icon_lifetool"
+			msg="goGridMenu(2)" text="生活助手">
 			<item id="2.0" upid="2" type="web" img="homepage.png"
 				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
 				text="欢迎页"></item>
@@ -554,8 +569,8 @@
 					text="积分查询"></item>
 			</item>
 		</item><!--for 一网通用户登录 -->
-		<item id="4" upid="0" type="grid" img="" msg="goGridMenu(4)"
-			text="一网通用户" Name="User">
+		<item id="4" upid="0" type="grid" img="icon_phonebank" msg="goGridMenu(4)"
+			text="手机银行" Name="User">
 			<item id="4.0" upid="4" type="web" img="homepage.png"
 				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
 				text="欢迎页"></item>
@@ -593,7 +608,7 @@
 				msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/cs_ActivateCreditCard.aspx)"
 				text="信用卡开卡"></item>
 		</item><!--金融助手，Android菜单，登录后，for... 版本使用 -->
-		<item id="9" upid="0" type="grid" img="icon_lifetool_pressed" msg="goGridMenu(9)"
+		<item id="9" upid="0" type="grid" img="icon_financialtool" msg="goGridMenu(9)"
 			text="金融助手" Name="Finacial">
 			<item id="9.1" upid="9" type="func" img="preferential_news.png"
 				msg="Post(http://m.cmbchina.com/personal/promotionlist.aspx?version=ios)"
@@ -764,7 +779,7 @@
 				msg="Post(http://m.trip.cmbchina.com?version=androidamp;DeviceType=E)"
 				text="商旅预订"></item>
 			<item id="9.14" upid="9" type="func" img="chongzhi.png"
-				msg="Post(http://m.cmbchina.com/phone/chongzhi.aspx?version=ios)"
+				msg="Post(http://m.cmbchina.com/phone/chongzhi.aspx?version=android)"
 				text="手机充值"></item>
 			<item id="9.16" upid="9" type="grid" img="productMarket.png"
 				msg="goGridMenu(9.16)" text="产品超市">

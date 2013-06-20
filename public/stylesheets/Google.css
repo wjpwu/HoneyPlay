@@ -1,0 +1,73 @@
+﻿body { background-image: url(../Images/bg.jpg); background-repeat: repeat; }
+
+/*
+.head .menubar, .head .menubar .left, .head .menubar .mid, .head .menubar .right { height: 44px; float:left; }
+
+.head { height:44px; width: 100%;  background: url(../Images/head_iphone_bg.png) repeat-x center; }
+
+.head .menubar { margin-left: 4px; background: url(../Images/head_mid_iphone_bg.png) repeat-x; display: inline; }
+
+.head .menubar .left { width: 14px; background: url(../Images/head_left_iphone_bg.png) no-repeat; }
+
+.head .menubar .mid { line-height: 44px; margin: 0 6px; }
+
+.head .menubar .mid, .head .menubar .mid a { font-size: 12px; color: #FFFFFF; font-weight: bold; }
+
+.head .menubar .right { width: 5px; background: url(../Images/head_right_iphone_bg.png) no-repeat; }
+
+.head span { line-height: 44px; font-size: 18px; color: #FFFFFF; font-weight: bold; text-align: center; display: block; }
+*/
+
+.head { position: relative; height: 44px; width: 100%; background: url(../Images/head_iphone_bg.png) repeat-x center; }
+.head > span { line-height: 44px; height: 44px; font-size: 18px; color: #FFFFFF; font-weight: bold; display: block; text-align: center; }
+*.head span { line-height: 44px; height: 44px; font-size: 18px; color: #FFFFFF; font-weight: bold; display: block; text-align: center; }
+
+.head .menubar { position: absolute; left: 10px; height: 44px; background: url(../Images/head_mid_iphone_bg.png) repeat-x; }
+.head .menubar .left, .head .menubar .mid, .head .menubar .right { height: 44px; float: left; }
+.head .menubar .left { width: 14px; background: url(../Images/head_left_iphone_bg.png) no-repeat; }
+.head .menubar .mid { line-height: 44px; margin: 0 6px; }
+.head .menubar .mid, .head .menubar .mid a { font-size: 12px; color: #FFFFFF; font-weight: bold; }
+.head .menubar .right { width: 5px; background: url(../Images/head_right_iphone_bg.png) no-repeat; }
+.head .homebtn { display: none; }
+
+
+
+.btns a.btn { border: solid 2px #6598cc; background-image: url(../Images/blue_btn_bg.png); }
+.btns a.btn:link { color: #003366; }
+.btns a.btn:visited { color: #003366; }
+.btns a.btn:hover { color: #003366; }
+
+.list .odd { border-top: solid 1px #fff; border-bottom: solid 1px #d5e2e8; background-color: #f2f6f9; }
+.list .even { border-top: solid 1px #f0f5f8; border-bottom: solid 1px #d3e0e6; background-color: #e3eaf0; }
+
+.list a.odd:link, .list a.odd:visited { background-color: #f2f6f9; }
+.list a.even:link, .list a.even:visited { background-color: #e3eaf0; }
+.list a.odd:hover, .list a.even:hover { background-color: #b2cdde; }
+.list a.odd { border-top: solid 1px white; border-bottom: solid 1px #d5e2e8; }
+.list a.even { border-top: solid 1px #f0f5f8; border-bottom: solid 1px #d3e0e6; }
+
+.list2 .odd { border-top: solid 1px #fff; border-bottom: solid 1px #d5e2e8; background-color: #f2f6f9; }
+.list2 .even { border-top: solid 1px #f0f5f8; border-bottom: solid 1px #d3e0e6; background-color: #e3eaf0; }
+
+.list2 a.odd:link, .list2 a.odd:visited { background-color: #f2f6f9; }
+.list2 a.even:link, .list2 a.even:visited { background-color: #e3eaf0; }
+.list2 a.odd:hover, .list2 a.even:hover { background-color: #b2cdde; }
+.list2 a.odd { border-top: solid 1px white; border-bottom: solid 1px #d5e2e8; }
+.list2 a.even { border-top: solid 1px #f0f5f8; border-bottom: solid 1px #d3e0e6; }
+
+/* 查看更多 */
+.seemore { background-color: #A4B3C6; }
+
+.noresult { border-top: solid 1px #d3e0e6; border-bottom: solid 1px #d3e0e6; background-color: #e3eaf0; }
+
+/* 二级菜单 */
+.submenu { border-bottom: solid 1px #EAEAEA; }
+a.submenulink:link { background-color: #f2f6f9; }
+a.submenulink:visited { background-color: #f2f6f9; }
+a.submenulink:hover { background-color: #e3eaf0; }
+
+.versionbgcolor { background-color: #e3eaf0; }
+
+.panel .s-options { background: url(../Images/head_iphone_bg.png) repeat-x; }
+
+.tab-framework .curtab { background: url(../Images/blue_tab.png) repeat-x; color: #fff; }

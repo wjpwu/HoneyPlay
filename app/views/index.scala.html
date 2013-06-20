@@ -1,7 +1,25 @@
 @(message: String)
+@main("Pact Mobile") {
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
+<div id="page" data-role="page" data-theme="b" class="fade">
+    <div data-role="header" data-theme="d">
+        <h1>Pact Mobile</h1>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview">
+            <li><a href="@{routes.Application.lifeTools()}"></p>生活助手</p></a>	</li>
+            <li><a href="#page3">Page Three</a></li>
+            <li><a href="@{routes.Application.login()}">手机银行</a></li>
+        </ul>
+
+        <br/>
+        <p class="ui-body-b">
+            welcome @message
+        </p>
+    </div>
+    <div data-role="footer" data-theme="d">
+        <h4>Power by pact</h4>
+    </div>
+</div>
     
 }

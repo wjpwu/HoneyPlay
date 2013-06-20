@@ -10,6 +10,7 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 
 import models.PBLogin;
+import models.PBUserInfo;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;
@@ -168,8 +169,10 @@ public class MobileApp extends Controller {
 		baos.close();	
         return ok(imageInByte).as("image/png");
 	}
-	
-	public static Result newUser() {
-		return TODO;
-	}
+
+    public static Result welcome()
+    {
+        PBUserInfo user = PBUserInfo.findByMobileNo("");
+        return ok(views.html.bank.mwelcome.render(user));
+    }
 }

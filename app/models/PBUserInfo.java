@@ -13,6 +13,8 @@ public class PBUserInfo {
 	public String creditCardNo;
 	
 	public String passWord;
+
+    public String passWordrepead;
 		
 	public static void create(){
 		
@@ -25,7 +27,7 @@ public class PBUserInfo {
 		tmp.firstName = "Aaron";
 		tmp.sex = 2;
 		tmp.mobileNo = "13625001207";
-//		tmp.creditCardNo = "6225885823016273";
+		tmp.creditCardNo = "6225885823016273";
 		return tmp;
 	}
 	

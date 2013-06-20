@@ -2,39 +2,38 @@
 
 @import helper._
 
-@main("PB Banking") {
-    
+@mmain("PB Banking") {
      @helper.form(action = routes.Application.login) {
-
 <div data-role="page" id="login" class="fade">
     <div data-role="header" data-theme="b">
         <a href="#index" data-role="button" data-icon="home">返回首页</a>
         <h1>用户登录</h1>
-        <a href="#register" data-role="button" data-icon="arrow-r">快速注册</a>
+        <a href="@{routes.Application.getReg()}" data-role="button" data-icon="arrow-r">快速注册</a>
     </div><!-- /头部 -->
 
     <div data-role="content">
-        <form>
             <ul data-role="listview" data-inset="true">
                 <li data-role="fieldcontain">
-                    <label for="loginName">用户名:</label>
-                    <input type="text" name="name" id="loginName" value="" maxlength="16" pattern="[0-9]*"  />
+                    <label for="mobileNo">用户名:</label>
+                    <input type="text" name="mobileNo" id="mobileNo" value="" maxlength="16" pattern="[0-9]*"  />
                 </li>
                 <li data-role="fieldcontain">
                     <label for="loginPwd">密码:</label>
-                    <input type="password" name="password" id="loginPwd" value=""  />
+                    <input type="password" name="passWord" id="loginPwd" value=""  />
                 </li>
 
                 <li data-role="fieldcontain">
                     <label for="loginCapt">验证码:</label>
+
                     <table>
                         <tr>
                             <td class="left" >
-                                <input name="captCode" type="text" id="loginCapt" value="" size="4">            		</td>
+                                <input name="captCode" type="text" id="loginCapt" value="" size="4">
+                            </td>
                             <td>
-                                <input type="image"  src="@{routes.Application.captcha(randomID)}" width = 40 height = 20
+                                <img  style=""  src="@{routes.Application.captcha(randomID)}" width = 60 height = 30
                                        alt=""
-                                       onclick="javascript:this.src='@{routes.Application.captcha(randomID)}&random=Math.random()'"/>
+                                       onclick="javascript:this.src='@{routes.Application.captcha(randomID)}&random='+Math.random()"/>
                             </td>
                         </tr>
                     </table>
@@ -48,8 +47,8 @@
                     <input type="submit" value="登录" data-theme="b" />
                 </li>
             </ul>
-        </form>
     </div><!-- /内容 -->
 </div>
+
     }
 }

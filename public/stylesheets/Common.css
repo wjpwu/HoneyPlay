@@ -1,0 +1,202 @@
+﻿body { color: #000000; font-family: Arial, Verdana, Helvetica, Sans-Serif, 宋体; -webkit-text-size-adjust: none; }
+
+* { margin: 0; padding: 0; font-size: 16px; }
+
+a:link, a:visited, a:hover { color: #000000; text-decoration: none; }
+a:hover { color: #FF0000; }
+
+.clearfloat { clear: both; font-size: 0; height: 0; overflow: hidden; }
+.imedisabled { ime-mode: disabled; }
+
+.floatright { float: right; }
+.floatleft { float: left; }
+.hide { display: none; }
+img { border: none; }
+.cursorpointer { cursor: pointer; }
+.noborder { border: none !important; }
+img { border: none; }
+
+/* 按钮样式 */
+.btns { margin: 16px 10px 0 10px; overflow: hidden; width: auto; }
+.btns a.btn { margin: 0 auto; text-decoration: none; font-size: 16px; font-weight: bold; line-height: 33px; text-align: center; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; height: 33px; overflow: hidden; display: block; background-repeat: repeat-x; }
+.btns a.btn:link { color: #fff; text-decoration: none; }
+.btns a.btn:visited { color: #fff; text-decoration: none; }
+.btns a.btn:hover { color: #fff; text-decoration: none; }
+
+.viewaround { margin-top: 16px !important; }
+.dividedwidth { width: 48%; }
+.per50width { width: 50%; }
+
+a.samllredbtn { border: solid 1px #3c0000; background: url(../Images/red_btn_bg.png) repeat-x center; width: 50%; margin: 0 auto; text-decoration: none; font-size: 14px; font-weight: bold; line-height: 28px; height: 28px; text-align: center; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; overflow: hidden; display: block; }
+a.samllredbtn:link { color: #fff; text-decoration: none; }
+a.samllredbtn:visited { color: #fff; text-decoration: none; }
+a.samllredbtn:hover { color: #fff; text-decoration: none; }
+
+
+/* 列表 */
+.list2 { width: 100%; overflow: hidden; }
+.list2 a { cursor: pointer; display: block; overflow: hidden; }
+.list2 .row { padding: 10px 8px; overflow: hidden; display: block; }
+.right-icon { vertical-align: middle; text-align: right; width: 20px; background: url(../Images/icon_right.png) no-repeat right center; }
+
+
+.list2 td { font-size: 16px; color: #333333; overflow: hidden; line-height: 20px; }
+.list2 .red { color: red; }
+.list2 .title { color: #000; line-height: 22px; font-size: 16px; }
+
+
+
+
+/* 列表 */
+.list { width: 100%; overflow: hidden; }
+.list a { width: 100%; cursor: pointer; display: block; padding: 10px 0; overflow: hidden; }
+
+.list .odd, .list .even { padding: 10px 0; overflow: hidden; }
+
+
+
+/* 列表 二行 */ 
+.list .info2 { margin-left: 10px; float: left; display: inline; }
+.list .info2 .title { color: #000; display: block; font-size: 16px; line-height: 22px; }
+.list .info2 .other { font-size: 16px; color: #333; }
+.list .iconright2 { float: right; display: inline; margin-right: 10px; color: #333; font-weight: bold; font-size: 16px; display: block; line-height: 42px; }
+
+/* 列表 一行 */ 
+.list .title1 { margin-left: 10px; float: left; color: #000; display: inline; overflow: hidden; font-size: 16px; }
+.list .iconright1 { float: right; display: inline; margin-right: 10px; font-weight: bold; color: #333; font-size: 16px; }
+
+/* 查看更多 */ 
+.seemore { cursor: pointer; text-align: center; overflow: hidden; font-weight: bold; padding: 8px 0; }
+.seemore span { font-size: 16px; display: block; width: 100%; color: #FFFFFF;  }
+
+.noresult { font-size: 14px; line-height: 20px; text-align: left; padding: 8px 12px; color: #333333; display: block; font-weight: bold; }
+
+/* 二级菜单 */
+a.submenulink { cursor: pointer; display: block; }
+
+.submenu { height: 50px; }
+.submenu .container { overflow: hidden; width: 100%; }
+.submenu .menuname { display: inline; margin-left: 12px; font-size: 18px; color: #000000; line-height: 50px; overflow: hidden; float: left; font-weight: bold; }
+.submenu .iconright { display: inline;  float: right; color: #000000; line-height: 50px; font-weight: bold; font-size: 20px; margin-right: 12px; }
+
+/* 搜索栏 */
+.searchrow { height: 34px !important; line-height: 34px; }
+.searchrow .btn { font-size: 14px; margin-right: 10px; }
+.searchrow .keyinput, .searchrow .keyinputfocus { margin-left: 10px; font-size: 14px; width: 92%; padding: 3px; color: #A5A5A5; }
+.searchrow .keyinput { color: #A5A5A5; }
+.searchrow .keyinputfocus { color: #000; }
+
+.searchrow select { margin-left: 10px; }
+div.searchrow select { margin-top: 4px; }
+
+/* 详细页面 */
+.infodetailbox { overflow: hidden; border: solid 1px #999999; -webkit-border-radius: 8px; background: #FFFFFF; border-radius: 8px; margin: 12px 10px; }
+
+.infodetail { margin: 8px; width: auto; }
+.infodetail .subject { word-break: break-all; word-wrap: break-word; color: #3c3c3c; font-weight: bold; line-height: 25px; font-size: 20px; padding-bottom: 6px; border-bottom: solid 1px #999999; }
+.infodetail .date { line-height: 20px; padding-top: 5px; font-size: 18px; }
+.infodetail .content { word-break: break-all; word-wrap: break-word; line-height: 24px; padding-top: 8px; }
+.infodetail .source { padding-top: 5px; line-height: 20px; text-align: right; width: 100%; }
+
+.infodetail .content a.tel { cursor: pointer; width: 74px; height: 19px; display: block; float: right; }
+.infodetail .content a.tel { background: url(../Images/tel_bg.png) no-repeat; }
+.infodetail .content a.tel span { float: right; font-size: 12px; font-weight: bold; color: #FFFFFF; line-height: 19px; margin-right: 4px; }
+
+.options .detailtitle, .options .detailother { word-break: break-all; word-wrap: break-word; font-weight: bold; line-height: 18px; padding: 6px 10px; }
+.options .detailtitle { color: #000000; font-size: 16px; }
+.options .detailother { color: #333333; font-size: 14px; }
+
+/* 详细页面 块标题 */
+.blocktitle { overflow: hidden; display: block; margin: 10px 10px 0 10px; text-align: left; font-weight: bold; color: #003366; font-size: 16px; }
+
+.head a.tab, .head a.curtab { margin-top: 6px; font-size: 14px; font-weight: bold; text-align: center; width: 76px; line-height: 32px; height: 28px; float: left; }
+.head a.tab:link { color: #FFFFFF; }
+.head a.tab:visited { color: #FFFFFF; }
+.head a.tab:hover { color: #FFFFFF; }
+.head a.curtab { color: #000000; background: url(../Images/curtab_76.png) no-repeat; }
+.head a.curtab:link { color: #000000; }
+.head a.curtab:visited { color: #000000; }
+.head a.curtab:hover { color: #000000; }
+.head .lefttabspace { margin-left: 10px; }
+
+.head a.tab2, .head a.curtab2 { width: 98px; } 
+.head a.curtab2 { background: url(../Images/curtab.png) no-repeat; }
+
+.list .valueinfo { color: #333333; font-weight: bold; margin-left: 14px; float: left; display: inline; clear: both; overflow: hidden; }
+.list .valueinfo .value { font-size: 16px; }
+.list .valueinfo .value .title { color: #000000; }
+.list .viconright { font-size: 16px; color: #000000; font-weight: bold; margin-right: 14px; float: right; display: inline; margin-top: 20px; }
+
+.options .viewmap, .options .calltel { width: 74px; padding: 0 8px 0 2px; }
+.options .viewmap a, .options .calltel a { cursor: pointer; width: 74px; height: 19px; display: block; float: right; }
+.options .calltel a { background: url(../Images/tel_bg.png) no-repeat; }
+.options .viewmap a { background: url(../Images/map_bg.png) no-repeat; }
+.options .viewmap a span, .options .calltel a span { float: right; font-size: 12px; font-weight: bold; color: #FFFFFF; line-height: 19px; margin-right: 4px; }
+
+.options .addphone, .options .tel { width: 26px; padding: 0 8px 0 2px; }
+.options .addphone a, .options .tel a { cursor: pointer; width: 26px; height: 26px; display: block; float: right; }
+.options .tel a { background: url(../Images/phone.png) no-repeat; }
+.options .addphone a { background: url(../Images/addphone.gif) no-repeat; }
+.options .white14 { color: #FFFFFF; font-size: 14px; }
+
+.checkerror { text-align: left; overflow: hidden; color: #FF0000; font-size: 14px; font-weight: bold; padding: 0 20px; display: none; }
+
+.options { margin: 12px 10px; overflow: hidden; }
+.options .line { background-color: #AAAAAA; height: 1px; overflow: hidden; font-size: 0; }
+
+.options .box { border: solid 1px #999999; -webkit-border-radius: 8px; background: #FFFFFF; border-radius: 8px; }
+.options .boxtop, .options .boxbottom, .options .boxmid { height: 40px; border: solid 1px #999999; background: #FFFFFF; width: 100%; }
+.options .boxtop { border-bottom: none; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; border-top-left-radius: 8px 8px; border-top-right-radius: 8px 8px; }
+.options .boxmid { border-bottom: none; }
+.options .boxbottom { -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; border-bottom-left-radius: 8px 8px; border-bottom-right-radius: 8px 8px; }
+
+.tablecenter { margin: 0 auto; }
+.tablecenter .contentleft, .tablecenter .contentcenter, .tablecenter .contentright { color: #3C3C3C; font-size: 16px; font-weight: bold; line-height: 38px; }
+.tablecenter .contentleft { text-align: left; padding-left: 16px; }
+.tablecenter .contentcenter { text-align: center; }
+.tablecenter .contentright { text-align: right; padding-right: 16px; }
+
+.options .leftspace { padding-left: 10px; }
+.options .rightspace { padding-right: 10px; }
+.options .text { line-height: 40px; font-size: 16px; font-weight: bold; color: #3C3C3C; width: 130px; }
+.options .inputbox { overflow: hidden; line-height: 40px; font-size: 16px; font-weight: bold; color: #000; }
+.options .spanbox { line-height: 40px; font-size: 16px; color: #000; text-align: right; padding-right: 2px; }
+.options .inputbox .seltype, .options .inputbox .inputtype { font-size: 16px; width: 96%; }
+.options .inputbox .inputtype { color: #000; }
+.options .inputbox .seltype { color: #000; }
+.options .inputbox .onlyinput { width: 100%; }
+
+.options .label { width: 16px; color: #000000; font-size: 16px; line-height: 40px; text-align: right; }
+.options .twowordlabel { width: 32px; }
+.options .threewordlabel { width: 48px; }
+.options .fourwordlabel { width: 64px; }
+.options .fivewordlabel { width: 80px; }
+
+/* 上下箭头 */
+.numup, .numdown { font-size: 16px; color: #f00; }
+.numdown { color: #0f0; }
+
+.multirows { margin: 0 8px; overflow: hidden; line-height: 18px; }
+.multirows div { margin: 2px 0; color: #333333; overflow: hidden; }
+.multirows .title { font-weight: bold; }
+
+/* 查看大图 */
+.viewimage{ background: url(../Images/ssd.png) no-repeat; cursor:pointer; float: right; line-height: 28px; padding-left: 33px; font-weight: bold;  font-size: 13px; color: #FFFFFF; width: 82px; height: 28px; }
+
+.aligncenter { text-align: center;}
+
+.tab-framework { background-color: #c8c8c8; margin: 0 auto; }
+.tab-framework td { cursor: pointer; height: 40px; overflow: hidden; color: #7f7f7f; text-align: center; background: transparent url(../Images/tab.png) repeat-x; vertical-align: middle; }
+
+.downloading { width: 100%; height: 54px; line-height: 54px; text-align: center; background-color: #e3e3e3; overflow: hidden; }
+.downloading span { font-size: 16px; font-weight: bold; color: #333; margin: 0 auto; width: 108px; background: transparent url(../Images/cirloading.gif) no-repeat left 14px; text-indent: 26px; display: block; }
+
+.reminder { line-height: 20px; padding: 10px; }
+.reminder span { color: #FF0000; font-weight: bold; display: block; margin-bottom: 2px; }
+
+/* 标题固定 */
+.fix-props { position: fixed !important; left: 0; top: 0; width: 100%; overflow: hidden; }
+.fix-clear { overflow: hidden; height: 0; width: 100%; clear: both; }
+.fix-default-pos { height: 44px; _height: 0; }
+.fix-searchrow-pos { height: 78px; _height: 0; }
+.fix-financing-pos { height: 127px; _height: 0; }

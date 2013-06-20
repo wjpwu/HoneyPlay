@@ -14,15 +14,23 @@ GET    /mobilecaptcha/:uuid   controllers.MobileApp.getCaptcha(uuid: String)
 # The version parameter is optional. E.g. /api/list-all?client=3.0&file=
 GET    /mobileitem   	  controllers.MobileApp.getItem(client ?= "IOS", file ?= "CommonMenu.xml")
 GET    /mobileitemmd5     controllers.MobileApp.getItemMD5(client ?= "IOS", file ?= "CommonMenu.xml")
-GET    /QREncode     controllers.MobileApp.getQRcodePng(text ?= "helloworld110")
+GET    /QREncode         controllers.MobileApp.getQRcodePng(text ?= "helloworld110")
+GET    /mwelcome         controllers.MobileApp.welcome()
+#Mobile Banking
+GET    /transferout   			controllers.MobileBankApp.index()  
+POST   /transferoutstep1        controllers.MobileBankApp.transferOutA()
+POST   /transferoutstep2        controllers.MobileBankApp.transferOutB()
 
 
 
-# Tasks    
-GET    /login             controllers.Application.index()
+# Tasks
+#POST   /logout             controllers.Application.logout()
 POST   /login             controllers.Application.login()
-GET    /captcha/:id       controllers.Application.captcha(id: String)      
-POST   /create            controllers.Application.newUser()
+GET    /captcha           controllers.Application.captcha(ClientNo ?= "IOS", random ?= "1")
+POST   /register          controllers.Application.postReg()
+GET    /register          controllers.Application.getReg()
+
+GET    /lifetools        controllers.Application.lifeTools()
 
 
 # Map static resources from the /public folder to the /assets URL path

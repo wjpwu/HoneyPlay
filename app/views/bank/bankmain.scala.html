@@ -1,0 +1,27 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/Common.css")"/>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/Google.css")"/>
+
+    <link href="https://mobile.cmbchina.com/MobileHtml/Base/doc/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://mobile.cmbchina.com/MobileHtml/Base/doc/styles/TableBtn.css" rel="stylesheet" type="text/css" />
+    <link href="https://mobile.cmbchina.com/MobileHtml/Base/doc/styles/NextBack.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.titleBar a{ text-decoration:none;}
+</style>
+    <script type="text/javascript" language="javascript" src="https://mobile.cmbchina.com/MobileHtml/Base/doc/scripts/TableBtn.js"></script>
+    <script type="text/javascript" language="javascript" src="https://mobile.cmbchina.com/MobileHtml/Base/doc/scripts/Transaction.js"></script>
+    <script type="text/javascript" language="javascript" src="https://mobile.cmbchina.com/MobileHtml/Base/doc/scripts/BaseScript.js"></script>
+    <script type="text/javascript" language="javascript" src="https://mobile.cmbchina.com/MobileHtml/Base/doc/scripts/WA_BaseCheck.js"></script>
+    <script type="text/javascript" language="javascript" src="https://mobile.cmbchina.com/MobileHtml/Base/doc/scripts/WA_CheckDate.js"></script>
+    <title>@title</title>
+</head>
+<body>
+@content
+</body>
+</html>

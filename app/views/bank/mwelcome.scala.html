@@ -1,0 +1,14 @@
+@(user: PBUserInfo)
+
+@welcomeStr(user : PBUserInfo)= {
+<div>
+<p> "hello world" @user.familyName @user.firstName, this is hello page from host!</p>
+<p> "Your credit card is" @user.creditCardNo</p>
+ </div>
+}
+
+@mmain("Hello world"){
+<div id="page" data-role="page" data-theme="e" class="fade">
+@welcomeStr(user)
+</div>
+}

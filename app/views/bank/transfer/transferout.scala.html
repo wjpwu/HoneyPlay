@@ -1,0 +1,168 @@
+@(transForm: Form[models.bank.PBTransfer])
+
+@import helper._
+
+@views.html.bank.bankmain("Pact异地汇款") {
+	
+	@helper.form(action = routes.MobileBankApp.transferOutA){
+    <div id="TitleBar" class="titleBar" style="display: none;">
+         <span id="p_Title">Pact异地汇款</span>
+    </div>
+    <div id="WorkArea">
+        <div id="WaitingBlock" style="display: none;">
+        </div>
+        <div id="DataArea">
+            <div id="ctl00_TitleMsg" style="display: none; color: Red" class="title">
+            </div>
+            <div id="ctl00_DataContent">
+                
+    <div class="box backfff">
+        <div class="a_c">
+         @select(transForm("accountNo"), 
+         options = options(models.bank.Cities.accounts),
+                '_label -> "请选择一卡通：",
+                'class -> "select100",
+                '_error -> transForm("accountNo").error.map(_.withMessage("Please select your city"))
+          )
+        </div>
+    </div>
+    <div id="ctl00_cphBody_DataBlock">
+        <div class="box backfff">
+            <div class="row">
+                <table>
+                    <tr>
+                        <td class="a_l">
+                            收款方户名:
+                        </td>
+                        <td class="a_r">
+                            <a href="javascript:void(0);" onclick="ImportInfo();return false;">选择收款方</a>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td class="a_c">
+                        		@inputText(
+                transForm("payeeName"), 
+                '_label -> "",
+                'class -> "input100",
+                'placeholder -> "收款方户名")                        </td>
+                    </tr>
+                    <tr>
+                        <td class="line">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a_c">
+                        
+                         @select(transForm("payeeCity"), 
+         options = options(models.bank.Cities.cities),
+                '_label -> "收款方地址:",
+                 'class -> "select100"
+            )
+                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="line">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a_l">
+                            @inputText(
+                transForm("payeeBankName"), 
+                'class -> "input100",
+                '_label -> "收款方开户行:",
+                'readonly -> "readonly",
+                '_default -> "招商银行"
+            	)
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td class="line">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a_c">
+
+			@inputText(
+                transForm("payeeBankNameExtra"), 
+                'class -> "input100",
+                '_label -> "支行信息（例如南山区科技园支行）:"
+            	)        </td>
+                    </tr>
+                    <tr>
+                        <td class="line">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a_l">
+                            @inputText(
+                transForm("payeeAccountNo"), 
+                'class -> "input100",
+                '_label -> "收款方账号:",
+                'maxlength-> "27",
+                'pattern->"[0-9]*"
+            	)
+                        </td> 
+                        
+                    </tr>
+                    <tr>
+                        <td class="line">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="a_l">
+                             @inputText(
+                transForm("payeeAccountNoRepeat"), 
+                'class -> "input100",
+                '_label -> "重复输入收款方账号:",
+                'maxlength-> "27",
+                'pattern->"[0-9]*"
+            	)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+<table id='ctl00_cphBody_ctl00' class="tb_btn" cellpadding="0" cellspacing="0" >
+    <tr>
+        <td id='ctl00_cphBody_ctl00_tdLeft' class="td_left_onout">
+        </td>
+        <td id='ctl00_cphBody_ctl00_tdMiddle' class="td_mid_onout">
+            <input type="submit" value="下一步">
+            
+        </td>
+        <td id='ctl00_cphBody_ctl00_tdRight' class="td_right_onout">
+        </td>
+    </tr>
+</table>
+
+
+
+
+    </div>
+    <div id="Remark" class="box backfff note">
+        说明:<br />
+        1、即日起至2015年12月31日，通过手机银行iPhone版、Android版（不含51型证书登录）、网页版办理“转账汇款”业务，手续费全免，每日高达20万汇款额度。<br/>
+        2、如果您未开通协议，请通过专业版“功能申请 -> 网上银行/手机银行签约申请”功能进行签约。<br />
+        <span style="color: #FF0000;">3、温馨提示：为了您的资金安全，请谨慎转账汇款，谨防上当受骗。<a href="javascript:void(0);" onclick="NoticeInfo();return false;">查看电话诈骗案例</a>
+        </span><br />
+        <div style='display: none'>
+            4、如果您使用IPhone3GS手机，请开启“短信预览”功能来接收“短信验证码”。
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    
+    }
+	}

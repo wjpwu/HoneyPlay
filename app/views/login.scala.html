@@ -2,50 +2,61 @@
 
 @import helper._
 
-@main("PB Banking") {
-    
+@mmain("PB Banking") {
+
+<script language="javascript">
+    function changeImage() {
+
+            var aa = Math.random();
+            document.getElementById("image").src =
+                    "@{routes.Application.captcha(randomID)}&random=Math.random()";
+//                    "'http://localhost:9000/root/captcha?ClientNo=054DBFFEE8B7085861884FEAB358D749214598493693509400122678&random='+Math.random();";
+                    //"@{routes.Application.captcha(randomID)}";
+            alert(aa);
+    }
+</script>
+<input type="image"  id="image" style="" class="go-button ui-third center" src="@{routes.Application.captcha(randomID)}" width = 80 height = 40
+      alt=""
+      onclick="javascript:this.src='http://localhost:9000/root/captcha?ClientNo=054DBFFEE8B7085861884FEAB358D749290776226480794900129356&random='+Math.random();" />
+
      @helper.form(action = routes.Application.login) {
          	<div class="inner-content hero">
 		<div>
 			<h5 id="login-page_sign_in_label" data-i18n="login-page-sign-in">Sign in to your account to pay bills, file claims, and more.</h5>
 		</div>
-		
+
 		@inputText(
-                loginForm("mobileNo"), 
+                loginForm("mobileNo"),
                 '_label -> "Mobile No.",
                 'placeholder -> "Mobile No."
             )
+
 		<br>
-		
+
             @inputPassword(
             	loginForm("passWord"),
                  '_label -> "Password",
                  'placeholder -> "Password"
-                
+
             )
 		<br>
 		<input type="hidden" name="uuid" value="@{randomID}"
-            
-            
-            <div id="zipInput" backface-visibility:hidden;="">							
+
+
+            <div id="zipInput" backface-visibility:hidden;="">
 							           @inputText(
             	loginForm("captCode"),
                  '_label -> "Capt Code",
                  'placeholder -> "Capt Code"
             )
-            
-            <input type="image" style="" class="go-button ui-third center" src="@{routes.Application.captcha(randomID)}" width = 40 height = 20
-             alt="" 
-           onclick="javascript:this.src='@routes.Application.captcha(randomID);"/>
-						
-						
-
-                       		
-		<div>
+               <img  id="image" style="" class="go-button ui-third center" src="@{routes.Application.captcha(randomID)}" width = 40 height = 20
+             alt=""
+           onclick="changeImage()"/>
+                <div>
 			<h5>  <a href="#/reset-index" id="login-page_forgot_password" data-i18n="login-forgot-password">Forgot your user ID or password?</a></h5>
 		</div>
 
-            
+
 		<div class="btn-section clear">
 			<span class="checkbox left">
 				<label class="label_check c_off" for="save-user-id" id="save-user-id-label">
@@ -53,16 +64,15 @@
 				</label>
 			</span>
 			<input type="submit" class="go-button ui-third center" value="Log In">
-							
+
 			<div class="clear"></div>
 		</div>
 							</div>
-	
 
-            
+
+
 	</div>
-        
-        
-        
+
+
     }
 }

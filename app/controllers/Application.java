@@ -2,7 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
-import models.PBLogin;
+import models.*;
 import play.Logger;
 import play.cache.Cache;
 import play.data.Form;
@@ -10,6 +10,7 @@ import play.libs.Images;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utils.PBUtils;
+import views.html.index;
 
 public class Application extends Controller {
 
@@ -24,14 +25,15 @@ public class Application extends Controller {
 			session("uuid", uuid);
 		}
 		Logger.info("generate uuid :" + uuid);
-		return ok(views.html.login.render(userForm,uuid));
+		return ok(views.html.mlogin.render(userForm,uuid));
 	}
 
 	public static Result login() {
 		String uuid = session("uuid");
 		Form<PBLogin> fill = userForm.bindFromRequest();
-		Logger.info("call login:" + fill.get().mobileNo + " "+ fill.get().passWord);
-		return unauthorized("incorrect password");
+		Logger.info("call login:" + fill.get().mobileNo + " "+ fill.get().passWord + " "+ fill.get().captCode);
+        return ok(index.render("hello world"));
+//		return ok(views.html.demo_html5.render());
 //		if (fill.hasErrors()) {
 //			return badRequest(views.html.login.render(fill,uuid));
 //		}
@@ -56,8 +58,8 @@ public class Application extends Controller {
 	}
 
 	// generate unique code
-	public static Result captcha(String uuid) throws IOException {
-		Logger.info("call captcha");
+	public static Result captcha(String uuid,String radom) throws IOException {
+		Logger.info("call captcha" +uuid +" "+ radom);
 		Images.Captcha captcha = Images.captcha();
 		captcha.setBackground("#FF0000");
 		String code = captcha.getText("#F4EAFD");
@@ -74,7 +76,23 @@ public class Application extends Controller {
 		return ok(PBUtils.getBytes(captcha)).as("jepg/png");
 	}
 
-	public static Result newUser() {
-		return TODO;
-	}
+
+    public static Form<PBUserInfo> userInfoForm = Form.form(PBUserInfo.class);
+
+    public static Result getReg()
+    {
+        return ok(views.html.mreg.render(userInfoForm));
+    }
+
+    public static Result postReg() {
+        Form<PBUserInfo> fill = userInfoForm.bindFromRequest();
+        Logger.info("call postReg:" + fill.get().mobileNo + " "+ fill.get().passWord);
+        return ok();
+    }
+
+    public static Result lifeTools()
+    {
+        return ok(views.html.mlifetool.render());
+    }
+
 }
