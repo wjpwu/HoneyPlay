@@ -1,8 +1,7 @@
 package controllers;
 
-import java.io.IOException;
-
-import models.*;
+import models.PBLogin;
+import models.PBUserInfo;
 import play.Logger;
 import play.cache.Cache;
 import play.data.Form;
@@ -11,6 +10,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import utils.PBUtils;
 import views.html.index;
+
+import java.io.IOException;
 
 public class Application extends Controller {
 

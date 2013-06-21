@@ -4,10 +4,13 @@
 	<item id="0" upid="0" Name="" type="grid" img="" msg="" text="">
 		<item id="1" upid="0" Name="DebitCard" type="grid" img="icon_myfavorite"
 			msg="goGridMenu(1)" text="我的最爱">
-			<item id="1.20" upid="1" type="qrcode" img="homepage.png"
+			<item id="1.26" upid="1" type="qrencode" img="homepage.png"
 				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
-				text="二维码"></item>
-			<item id="1.21" upid="1" type="web" img="account_mgr.png"
+				text="二维码生成(host)"></item>
+            <item id="1.27" upid="1" type="qrdecode" img="homepage.png"
+                  msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
+                  text="二维码解析(host)"></item>
+            <item id="1.21" upid="1" type="web" img="account_mgr.png"
 				msg="PostRequest(transferout)"
 				text="招行异地汇款"></item>
 			<item id="1.22" upid="1" type="funcc" img="account_mgr.png"

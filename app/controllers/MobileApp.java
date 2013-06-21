@@ -1,14 +1,7 @@
 package controllers;
 
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
-
+import com.google.zxing.NotFoundException;
+import com.google.zxing.WriterException;
 import models.PBLogin;
 import models.PBUserInfo;
 import play.Logger;
@@ -16,17 +9,23 @@ import play.Play;
 import play.cache.Cache;
 import play.data.Form;
 import play.libs.Images;
+import play.mvc.BodyParser;
 import play.mvc.Controller;
+import play.mvc.Http;
 import play.mvc.Result;
 import utils.PBUtils;
 
-import com.google.zxing.NotFoundException;
-import com.google.zxing.WriterException;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MobileApp extends Controller {
 
 	public static Form<PBLogin> userForm = Form.form(PBLogin.class);
-	
 	
 	public static Result getUUID()
 	{
@@ -146,7 +145,6 @@ public class MobileApp extends Controller {
 		return ok("<message status=\"1\">no support for this file type</message>");
 	}
 	
-	
 	public static Result getQRcodePng(String text) throws WriterException, IOException
 	{
 		Logger.info("call getQRcodePng encode " + text);
@@ -166,9 +164,45 @@ public class MobileApp extends Controller {
 		ImageIO.write( readAble ? qrCodeLogo : qrCode, "PNG", baos );
 		baos.flush();
 		byte[] imageInByte = baos.toByteArray();
-		baos.close();	
+		baos.close();
+
         return ok(imageInByte).as("image/png");
 	}
+
+    public static Result deCodeQRCODE()
+    {
+        Http.MultipartFormData body = request().body().asMultipartFormData();
+//        Http.MultipartFormData.FilePart picture = body.getFile("qrcode.png");
+        if(body.getFiles().size() > 0)
+        {
+            Http.MultipartFormData.FilePart picture = body.getFiles().get(0);
+            Logger.info("call deCodeQRCODE encode " + picture.getFilename());
+            String fileName = picture.getFilename();
+            String contentType = picture.getContentType();
+            File file = picture.getFile();
+            if (file !=null)
+            {
+                try{
+                    BufferedImage qrCode = ImageIO.read(file);
+                    String decode = PBUtils.zxingQRDecode(qrCode);
+                    Logger.info("call deCodeQRCODE encode "+decode);
+                    return ok(decode);
+                }
+                catch (IOException e)
+                {
+
+                }
+                catch (NotFoundException e)
+                {
+
+                }
+            }
+            return ok("no qrcode found");
+        }
+        else {
+            return ok("no file found");
+        }
+    }
 
     public static Result welcome()
     {

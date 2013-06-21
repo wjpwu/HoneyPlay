@@ -15,6 +15,7 @@ GET    /mobilecaptcha/:uuid   controllers.MobileApp.getCaptcha(uuid: String)
 GET    /mobileitem   	  controllers.MobileApp.getItem(client ?= "IOS", file ?= "CommonMenu.xml")
 GET    /mobileitemmd5     controllers.MobileApp.getItemMD5(client ?= "IOS", file ?= "CommonMenu.xml")
 GET    /QREncode         controllers.MobileApp.getQRcodePng(text ?= "helloworld110")
+POST   /qrdecode         controllers.MobileApp.deCodeQRCODE()
 GET    /mwelcome         controllers.MobileApp.welcome()
 #Mobile Banking
 GET    /transferout   			controllers.MobileBankApp.index()  

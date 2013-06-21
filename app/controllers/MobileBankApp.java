@@ -1,6 +1,5 @@
 package controllers;
 
-import models.PBUserInfo;
 import models.bank.PBTransfer;
 import play.data.Form;
 import play.mvc.Controller;
