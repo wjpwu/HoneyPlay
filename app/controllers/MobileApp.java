@@ -44,16 +44,16 @@ public class MobileApp extends Controller {
 		Logger.info("call postLogin:" + uuid + "/r" +fill.get().uuid +"/r" + fill.get().mobileNo + "/r"+ fill.get().passWord + "/r" + fill.get().captCode);
 		String sessionPtCode = (String)Cache.get(uuid+"captCode");
 		Map map = new HashMap();
-		if(sessionPtCode != null && !sessionPtCode.equals(fill.get().captCode))
-		{
-			return ok("<message status=\"1\">captCode is wrong</message>");
-		}
-		else if(!"13625001207".equals(fill.get().mobileNo)){
-			return ok("<message status=\"1\">Mobile No is not found</message>");
-		}
-		else if(!"password".equals(fill.get().passWord)){
-			return ok("<message status=\"1\">Password is wrong</message>");
-		}
+//		if(sessionPtCode != null && !sessionPtCode.equals(fill.get().captCode))
+//		{
+//			return ok("<message status=\"1\">captCode is wrong</message>");
+//		}
+//		else if(!"13625001207".equals(fill.get().mobileNo)){
+//			return ok("<message status=\"1\">Mobile No is not found</message>");
+//		}
+//		else if(!"password".equals(fill.get().passWord)){
+//			return ok("<message status=\"1\">Password is wrong</message>");
+//		}
 		return ok("<message status=\"0\" token =\""+ new Long(System.currentTimeMillis()).toString() + "\">Welcome</message>");
 //		if (fill.hasErrors()) {
 //			return badRequest(views.html.login.render(fill,uuid));
