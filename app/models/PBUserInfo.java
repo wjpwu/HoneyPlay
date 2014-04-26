@@ -15,8 +15,10 @@ public class PBUserInfo {
 	public String passWord;
 
     public String passWordrepead;
-		
-	public static void create(){
+
+    public String session;
+
+    public static void create(){
 		
 	}
 	

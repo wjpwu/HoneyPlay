@@ -150,7 +150,7 @@ public class MobileApp extends Controller {
 		Logger.info("call getQRcodePng encode " + text);
 		BufferedImage qrCode = PBUtils.zxingQRencode(text, 198, 198);
 //		File logo = Play.application().getFile("/public/mobile/icons/icon_myfavorite_pressed.png");
-		BufferedImage qrCodeLogo = PBUtils.addLogo(qrCode, "Pact");
+		BufferedImage qrCodeLogo = PBUtils.addLogo(qrCode, "XIB");
 		boolean readAble = true;
 		//check it's readable or not
 		try{
@@ -207,6 +207,7 @@ public class MobileApp extends Controller {
     public static Result welcome()
     {
         PBUserInfo user = PBUserInfo.findByMobileNo("");
+        user.session   = session("uuid") + "----" + session().toString();
         return ok(views.html.bank.mwelcome.render(user));
     }
 }
